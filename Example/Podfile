@@ -1,11 +1,10 @@
 use_frameworks!
-
+#source 'https://github.com/VE66/CCConfigSetting.git'
 platform :ios, '12.0'
 
 target 'CCNetworking_Example' do
   pod 'CCNetworking', :path => '../'
-  pod 'CCConfigSetting', :path=>'/Users/zcz/.cocoapods/repos/CCConfigSetting'
-
+  pod 'CCConfigSetting', :git=> 'https://github.com/VE66/CCConfigSetting.git'
   target 'CCNetworking_Tests' do
     inherit! :search_paths
 

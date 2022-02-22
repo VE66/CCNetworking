@@ -1,8 +1,8 @@
 {
   "name": "CCNetworking",
   "version": "0.1.0",
-  "summary": "A short description of CCNetworking.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "CCNetworking.",
+  "description": "CCSDK networking",
   "homepage": "https://github.com/VE66/CCNetworking",
   "license": {
     "type": "MIT",
@@ -16,7 +16,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "12.0"
   },
   "source_files": "CCNetworking/Classes/**/*",
   "dependencies": {
