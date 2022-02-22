@@ -30,10 +30,10 @@
 /* Begin PBXFileReference section */
 		0432BB460A46CE9A9C236B48 /* Pods-CCNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCNetworking_Tests.release.xcconfig"; path = "Target Support Files/Pods-CCNetworking_Tests/Pods-CCNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		05874235888A8E0FCFB4FE9A /* Pods_CCNetworking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCNetworking_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		34C2B9365BF7E2521756CB9E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		34C2B9365BF7E2521756CB9E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		41BED3615EF8FA34878B5F9D /* Pods-CCNetworking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCNetworking_Example.release.xcconfig"; path = "Target Support Files/Pods-CCNetworking_Example/Pods-CCNetworking_Example.release.xcconfig"; sourceTree = "<group>"; };
-		43DB2A34EF12C34040D8807E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		5E41221DB6AD7E6C081A1E6A /* CCNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CCNetworking.podspec; path = ../CCNetworking.podspec; sourceTree = "<group>"; };
+		43DB2A34EF12C34040D8807E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5E41221DB6AD7E6C081A1E6A /* CCNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CCNetworking.podspec; path = ../CCNetworking.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* CCNetworking_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCNetworking_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +147,6 @@
 				9930A912E623762EE021E6F0 /* Pods-CCNetworking_Tests.debug.xcconfig */,
 				0432BB460A46CE9A9C236B48 /* Pods-CCNetworking_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -291,10 +291,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CCNetworking_Example/Pods-CCNetworking_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CCConfigSetting/CCConfigSetting.framework",
 				"${BUILT_PRODUCTS_DIR}/CCNetworking/CCNetworking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCConfigSetting.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCNetworking.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,7 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -499,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

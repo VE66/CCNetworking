@@ -1,9 +1,10 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '12.0'
 
 target 'CCNetworking_Example' do
   pod 'CCNetworking', :path => '../'
+  pod 'CCConfigSetting', :path=>'/Users/zcz/.cocoapods/repos/CCConfigSetting'
 
   target 'CCNetworking_Tests' do
     inherit! :search_paths

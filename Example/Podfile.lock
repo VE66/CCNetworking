@@ -1,0 +1,22 @@
+PODS:
+  - CCConfigSetting (0.1.0)
+  - CCNetworking (0.1.0):
+    - CCConfigSetting
+
+DEPENDENCIES:
+  - CCConfigSetting (from `/Users/zcz/.cocoapods/repos/CCConfigSetting`)
+  - CCNetworking (from `../`)
+
+EXTERNAL SOURCES:
+  CCConfigSetting:
+    :path: "/Users/zcz/.cocoapods/repos/CCConfigSetting"
+  CCNetworking:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CCConfigSetting: 20ea854d737e16df8f916905a5c64b13dacdd118
+  CCNetworking: 7ac0ca5ff669398fdcc9c53d3b08b5f9a85ff915
+
+PODFILE CHECKSUM: 098c1d8e02eff8c99f0fddea41acaa87f2901b40
+
+COCOAPODS: 1.11.2
