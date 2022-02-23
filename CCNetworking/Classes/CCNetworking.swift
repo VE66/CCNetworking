@@ -35,7 +35,7 @@ class CCNetworking: NSObject {
                 if let data = backData {
                     DispatchQueue.main.async {
                         let dict = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String: Any]
-                        if let dic = dict, let suc = dic?["Succeed"] as? Bool, suc == true {
+                        if let dic = dict, let suc = dic["Succeed"] as? Bool, suc == true {
                             success?(dic)
                         } else {
                             failure?(error ?? "请求失败,请稍后重试!")

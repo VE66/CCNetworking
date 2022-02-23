@@ -1,6 +1,6 @@
 {
   "name": "CCConfigSetting",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "CCConfigSetting.",
   "description": "QM app CCConfigSetting",
   "homepage": "https://github.com/VE66/CCConfigSetting",
@@ -13,10 +13,11 @@
   },
   "source": {
     "git": "https://github.com/VE66/CCConfigSetting.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "CCConfigSetting/Classes/**/*"
+  "source_files": "CCConfigSetting/Classes/**/*",
+  "public_header_files": "Pod/Classes/**/*.h"
 }
