@@ -15,13 +15,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CCConfigSetting:
-    :commit: 8b5fb655a890b3cd448c3f632559a2f8719174d8
+    :commit: 234b66e71921d762c8b8bcbcdbba4c12c76c7457
     :git: https://github.com/VE66/CCConfigSetting.git
 
 SPEC CHECKSUMS:
-  CCConfigSetting: 76ae5fdb105c2d77e78bbad8cbb6b5a24212602d
-  CCNetworking: 4e8cd0edb49b65b45f90971b10e533fa24f61233
+  CCConfigSetting: 8b6c04c5b75a238dcc59ba94e6b3758a74cd83b7
+  CCNetworking: c0744605aaa3bb57716af8cb0438f93e65524e02
 
-PODFILE CHECKSUM: c44dc76e9be41d6889b7f2d43d0230903582a4a2
+PODFILE CHECKSUM: 36ebe2c7c2fe4a5ffe37e4a24068df12e0e02db2
 
 COCOAPODS: 1.11.2
