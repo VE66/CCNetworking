@@ -34,11 +34,17 @@ class CCNetworking: NSObject {
             let task = session.dataTask(with: request) { (backData, response, error) in
                 if let data = backData {
                     DispatchQueue.main.async {
-                        let dict = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
-                        if let dic = dict as? [String: Any], let suc = dic["Succeed"] as? Bool, suc == true {
-                            success?(dic)
-                        } else {
-                            failure?(error ?? "请求失败,请稍后重试!")
+                        do {
+                            let dict = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
+                            
+                            if let dic = dict as? [String: Any], let suc = dic["Succeed"] as? Bool, suc == true {
+                                success?(dic)
+                            } else {
+                                failure?(error ?? "请求失败,请稍后重试!")
+                            }
+                            
+                        } catch {
+                            failure?("请求失败,请稍后重试!")
                         }
                     }
                 } else {
