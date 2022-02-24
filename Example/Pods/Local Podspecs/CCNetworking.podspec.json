@@ -19,10 +19,5 @@
     "ios": "9.0"
   },
   "source_files": "CCNetworking/Classes/**/*",
-  "frameworks": "UIKit",
-  "dependencies": {
-    "CCConfigSetting": [
-
-    ]
-  }
+  "frameworks": "UIKit"
 }

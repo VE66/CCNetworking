@@ -6,14 +6,14 @@
 //
 
 import UIKit
-import CCConfigSetting
+//import CCConfigSetting
 
 typealias CCSuccess = ([String: Any]?)->Void
 typealias CCFailure = (Any?)->Void
 
 class CCNetworking: NSObject {
     
-    class func POST(_ path: String = "", param: [String: Any], success: CCSuccess?, failure: CCFailure?) {
+    class func POST(url: String ,path: String = "", param: [String: Any], success: CCSuccess?, failure: CCFailure?) {
         
         if let data = try? JSONSerialization.data(withJSONObject: param, options: JSONSerialization.WritingOptions.fragmentsAllowed) {
             let jsonStr = String(data: data, encoding: .utf8) ?? ""
@@ -22,12 +22,12 @@ class CCNetworking: NSObject {
             let newData = newString.data(using: String.Encoding.utf8)!
 
             let session = URLSession.shared
-            var url = ccBaseURL
+            var nUrl = URL.init(string: url) ?? URL(string: "")!
             if path.isEmpty == false {
-                url = url.appendingPathComponent(path)
+                nUrl = nUrl.appendingPathComponent(path)
             }
             
-            var request = URLRequest.init(url: url)
+            var request = URLRequest.init(url: nUrl)
             request.httpMethod = "POST"
             request.httpBody = newData
                         
@@ -54,8 +54,8 @@ class CCNetworking: NSObject {
         }
     }
     
-    class func POSTMoblie(param: [String: Any], success: CCSuccess?, failure: CCFailure?) {
-        POST("/mobile", param: param, success: success, failure: failure)
+    class func POSTMoblie(url: String, param: [String: Any], success: CCSuccess?, failure: CCFailure?) {
+        POST(url: url, path: "/mobile", param: param, success: success, failure: failure)
     }
     
 }
