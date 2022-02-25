@@ -18,6 +18,8 @@
   "platforms": {
     "ios": "9.0"
   },
+  "swift_versions": "5.0",
   "source_files": "CCNetworking/Classes/**/*",
-  "frameworks": "UIKit"
+  "frameworks": "UIKit",
+  "swift_version": "5.0"
 }
