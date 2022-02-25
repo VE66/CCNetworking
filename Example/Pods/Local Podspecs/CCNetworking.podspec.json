@@ -26,5 +26,8 @@
 
     ]
   },
+  "pod_target_xcconfig": {
+    "skip_validation": true
+  },
   "swift_version": "5.0"
 }

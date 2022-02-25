@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CCNetworking'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'CCNetworking.'
 
 # This description is used to generate tags and improve search results.
@@ -37,6 +37,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   s.dependency 'CCConfigSetting'
+  s.pod_target_xcconfig = {'skip_validation' => true }
   # s.dependency 'AFNetworking', '~> 2.3'
   
 end
