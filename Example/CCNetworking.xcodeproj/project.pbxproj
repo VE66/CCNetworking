@@ -291,10 +291,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CCNetworking_Example/Pods-CCNetworking_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CCConfigSetting/CCConfigSetting.framework",
 				"${BUILT_PRODUCTS_DIR}/CCNetworking/CCNetworking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCConfigSetting.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCNetworking.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

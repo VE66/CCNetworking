@@ -1,16 +1,27 @@
 PODS:
-  - CCNetworking (0.1.0)
+  - CCConfigSetting (0.1.1)
+  - CCNetworking (0.1.0):
+    - CCConfigSetting
 
 DEPENDENCIES:
+  - CCConfigSetting (from `https://github.com/VE66/CCConfigSetting.git`)
   - CCNetworking (from `../`)
 
 EXTERNAL SOURCES:
+  CCConfigSetting:
+    :git: https://github.com/VE66/CCConfigSetting.git
   CCNetworking:
     :path: "../"
 
-SPEC CHECKSUMS:
-  CCNetworking: 133e83adbef442fba91c871c6b4343137cb27191
+CHECKOUT OPTIONS:
+  CCConfigSetting:
+    :commit: 234b66e71921d762c8b8bcbcdbba4c12c76c7457
+    :git: https://github.com/VE66/CCConfigSetting.git
 
-PODFILE CHECKSUM: 8e9743d141a47bfeb8dd81409ad060e6df83970f
+SPEC CHECKSUMS:
+  CCConfigSetting: 8b6c04c5b75a238dcc59ba94e6b3758a74cd83b7
+  CCNetworking: dde3790f795d4eb6061b30e537f9b3ada8cecca9
+
+PODFILE CHECKSUM: 583fbea21aea7ba3c929418ca58ffbed087cddc5
 
 COCOAPODS: 1.11.2
