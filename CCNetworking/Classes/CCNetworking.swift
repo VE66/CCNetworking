@@ -8,8 +8,8 @@
 import UIKit
 import CCConfigSetting
 
-public typealias CCSuccess = ([String: Any]?)->Void
-public typealias CCFailure = (Any?)->Void
+public typealias CCSuccess = ([String: Any])->Void
+public typealias CCFailure = (Any)->Void
 
 public class CCNetworking: NSObject {
     
@@ -49,7 +49,7 @@ public class CCNetworking: NSObject {
                     }
                 } else {
                     DispatchQueue.main.async {
-                        failure?(error?.localizedDescription)
+                        failure?(error?.localizedDescription ?? "请求失败,请稍后重试!")
                     }
                 }
             }
