@@ -15,6 +15,12 @@ public class CCNetworking: NSObject {
     
     public class func POST(url: String = ccBaseURL.absoluteString ,path: String = "", param: [String: Any], success: CCSuccess?, failure: CCFailure?) {
         
+        var newParam = param
+        if param.keys.contains("sessionId") == false {
+            let sessionId = CCKeyChain.shared.userID.value ?? ""
+            newParam.updateValue(sessionId, forKey: "sessionId")
+        }
+        
         if let data = try? JSONSerialization.data(withJSONObject: param, options: JSONSerialization.WritingOptions.fragmentsAllowed) {
             let jsonStr = String(data: data, encoding: .utf8) ?? ""
             let jsonString = "data=\(jsonStr)"
